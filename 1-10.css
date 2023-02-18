@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #FF9A4B;
+  height: 50px;
+}
+
+main {
+  margin: 50px auto;
+  width: 960px;
+
+}
+
+.box {
+  display: flex; /*boxのclassを作らずにmainに直接display: flex;を入れる*/
+}
+
+.box-item {
+  background-color: #EEEEEE;
+  width: 300px;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.step { /*htmlのどこに存在するかわからない*/
+  background-color: #FF9A4B;
+  color: white;
+  display: inline-block; /*なくても問題ない*/
+  position: absolute;
+  margin-left: -10px; /*htmlでの位置によって変わる？解答では0だった*/
+  margin-top: -10px; /*以下略*/
+  padding: 5px 0;
+}
+
+.item1 {
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: bottom; /*sample画像をもっとよくみる！解答はbottom*/
+  height: 150px;
+}
+
+.item2 {
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: bottom; /*sample画像をもっとよくみる！解答はbottom*/
+  height: 150px;
+}
+
+.item3 {
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: bottom; /*sample画像をもっとよくみる！解答はbottom*/
+  height: 150px;
+}
+
+.box-item:first-child { /*最初にこれを指定したから気づかなかったが要らない*/
+  margin-left: 0;
+}
+
+.box-item:last-child {
+  margin-right: 0;
+}
+
+.box-text h3 {
+  padding: 15px 0 5px 0;
+}
+
+.text {
+  font-size: 11.9px; /*sample画像と比較したときのサイズに合わせたため実際は要らない*/
+}
+
+footer {
+  background-color: #AAAAAA;
+  width: 100%; /*header footerは要らない*/
+  height: 50px;
+  margin-top: 50px; /*mainでmarginを指定してるので要らない*/
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width:100%;
+    height: 50px;
+  }
+
+  main {
+    margin: 50px auto;
+    width: 100%;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-item {
+    width: 90%;
+    margin: 0 0 20px 0;
+  }
+
+  .box-item:last-child {
+    margin: 0;
+  }
+
+  .item1 {
+    
+  }
+
+
+
+  footer {
+    height: 50px;
+  }
+}
